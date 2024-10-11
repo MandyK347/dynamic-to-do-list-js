@@ -17,7 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         } else {
             // Code to add the task to the list goes here
-            console.log("Task added", taskText);
+            console.log("Task added:", taskText);
+
+            // Optionally clear the input field after adding the task
+            taskInput.value = '';
         }
 
         // Create a new list item
