@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (taskText === "") {
             alert("Please enter a task.");
             return;
+        } else {
+            // Code to add the task to the list goes here
+            console.log("Task added", taskText);
         }
 
         // Create a new list item
