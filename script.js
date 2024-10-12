@@ -18,31 +18,31 @@ document.addEventListener('DOMContentLoaded', () => {
              // Logic to add the task to the list (this part can be customized)
              console.log('Task added: ${taskText}'); // For demonstration, log the task
         }
-        
-        // Create a new list item element
-        const listItem = document.createElement("li");
-        // Set the text content of the the list item to taskTask
-        listItem.textContent = taskText;
 
-        // Create a new button element for removing the task
-        const removeButton = document.createElement("button");
-        removeButton.textContent = "Remove";
-        // Set the class name of the remove button to 'remove-btn'
-        removeButton.className = "remove-btn";
+        if (taskText !== '') {
+             // Create a new li element
+             const li = document.createElement("li");
+             li.textContent = taskText;
 
-        // Assign an onclick event to the remove button 
-        removeButton.onclick = function() {
-            taskList.removeChild(listItem);
-        };
+             // Create a remove button
+             const removeButton = document.createElement("button");
+             removeButton.textContent = "Remove";
+             removeButton.className = "remove-btn"; // Set class name directly
 
-        // Append the remove button to the list item
-        listItem.appendChild(removeButton);
+             // Assign onclick event to remove button 
+             removeButton.onclick = function() {
+                 taskList.removeChild(li); // Remove the li element
+             };
 
-        // Append the list item to the task list
-        taskList.appendChild(listItem);
+             // Append the remove button to the li element
+             li.appendChild(removeButton);
 
-        // Clear the task input field
-        taskInput.value = "";
+              // Append the li to the tasklist
+              taskList.appendChild(li);
+
+             // Clear the task input field
+             taskInput.value = "";
+        }     
     }
     
     // Attach Event listeners
@@ -55,3 +55,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+       
