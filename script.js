@@ -19,14 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
              console.log('Task added: ${taskText}'); // For demonstration, log the task
         }
         
-        // Create a new list item
+        // Create a new list item element
         const listItem = document.createElement("li");
+        // Set the text content of the the list item to taskTask
         listItem.textContent = taskText;
 
-        // Create a remove button
-        const removeButton = document.createElement('button');
+        // Create a new button element for removing the task
+        const removeButton = document.createElement("button");
         removeButton.textContent = "Remove";
-        removeButton.className = 'remove-btn';
+        // Set the class name of the remove button to 'remove-btn'
+        removeButton.className = "remove-btn";
 
         // Assign an onclick event to the remove button 
         removeButton.onclick = function() {
