@@ -7,14 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Create the addTask Function
     function addTask() {
-        // Retrieve and trim the task input value
-        const taskText = taskInput.Value.trim();
+        // Retrieve the value from the task input field and trim it
+        const taskInput = document.getElementById('taskInput'); // Change 'taskInput' to your input field's ID
+        const taskText = taskInput.value.trim();
 
         // Check if the input is not empty
         if (taskText === "") {
             alert("Please enter a task.");
-            return;
-        }  
+        }  else {
+             // Logic to add the task to the list (this part can be customized)
+             console.log('Task added: ${taskText}'); // For demonstration, log the task
+        }
         
         // Create a new list item
         const li = document.createElement("li");
