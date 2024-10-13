@@ -93,6 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Load task when the page loads
-    loadTask();
+    loadTasks();
 });
        
